@@ -41,3 +41,4 @@
 	        }
 	return 0;
     }
+// PORTA레지스터를 어떤 7segment를 점등시킬지(LED_CTRL)와 어떤 숫자값을 7segment에 출력할지(LED_DATA)를 결정하는데에 두가지 용도로 활용
