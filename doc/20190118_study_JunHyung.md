@@ -36,18 +36,18 @@
 ### [외부인터럽트와 관련된 레지스터들]
 ##### 1. 외부 인터럽트 제어레지스터A,B(External interrupt control registerA,B)
    - 외부에서 들어온 인터럽트를 어떻게 감지할 것인가에 대한 레지스터
-   - ##### EICRA: INT0~3까지에 대한 감지 방법을 제어 ![EICRA](C:/Users/이준형/Desktop/EICRA.png) ![HowEICRA](C:/Users/이준형/Desktop/HowEICRA.png)
+   - ##### EICRA: INT0~3까지에 대한 감지 방법을 제어 ![EICRA](C:/Users/이준형/Documents/HW스터디문서/BootHWstudy/img/EICRA.png) ![HowEICRA](C:/Users/이준형/Documents/HW스터디문서/BootHWstudy/img/HowEICRA.png)
      - asynchronously: 비동기적으로 인터럽트 요구 
-   - ##### EICRB: INT4~7까지에 대한 감지 방법을 제어 ![EICRB](C:/Users/이준형/Desktop/EICRB.png) ![HowEICRB](C:/Users/이준형/Desktop/HowEICRB.png)
+   - ##### EICRB: INT4~7까지에 대한 감지 방법을 제어 ![EICRB](C:/Users/이준형/Documents/HW스터디문서/BootHWstudy/img/EICRB.png) ![HowEICRB](C:/Users/이준형/Documents/HW스터디문서/BootHWstudy/img/HowEICRB.png)
      - falling(하강모서리), rising(상승모서리)에서 인터럽트요구를 감지 
 ---
 ##### 2. 외부 인터럽트 마스크레지스터(External interrupt mask register) 
 - 'EIMSK'
 - n번째 bit가 set된 상태에서 SREG.I가 1인 상태(전역으로 인터럽트 허용된 상태)일때 외부 인터럽트 INTn이 허용된다.
 - reset시에는 해당 INTn 금지
-![EIMSK](C:/Users/이준형/Desktop/EIMSK.png)
+![EIMSK](C:/Users/이준형/Documents/HW스터디문서/BootHWstudy/img/EIMSK.png)
 ##### 3. 외부 인터럽트 플래그레지스터(External interrupt flag register) 
-- 'EIFR' ![EIRF](C:/Users/이준형/Desktop/EIFR.png)
+- 'EIFR' ![EIRF](C:/Users/이준형/Documents/HW스터디문서/BootHWstudy/img/EIFR.png)
 - 특정 INTn의 인터럽트 요구 전에는 해당 비트가 0으로 reset상태
 - 인터럽트 요구시 해당 플래그 비트가 1로 set
 - 해당 플래그 비트가 1로 set상태에서 해당 EIMSK 비트가 set & SREG.I 역시 1로 set상태라면 >> '인터럽트 벡터로 분기'
@@ -81,7 +81,7 @@
 - 앞서 '일시적으로' 금지된 인터럽트 상태도 해제.
 
 ---
-![인터럽트처리과정예시](C:/Users/이준형/Desktop/InterruptProcessExample.png)
+![인터럽트처리과정예시](C:/Users/이준형/Documents/HW스터디문서/BootHWstudy/img/InterruptProcessExample.png)
 
 ---
 #### Example 1
