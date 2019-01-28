@@ -85,7 +85,7 @@
 
 ---
 #### Example 1
-```
+```C
 // 인터럽트 예제 1
 #include<avr/io.h>
 #include<avr/interrupt.h>
